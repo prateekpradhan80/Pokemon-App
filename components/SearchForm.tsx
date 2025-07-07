@@ -16,9 +16,9 @@ export default function SearchForm({
   setSearch: (s: string) => void;
 }) {
   return (
-    <form className="flex flex-col md:flex-row gap-2 mb-6">
+    <form className="flex w-1/2 flex-col md:flex-row gap-2 mb-6">
       <select
-        className="p-2 rounded border"
+        className="p-5 rounded border slct"
         value={type}
         onChange={e => setType(e.target.value)}
         disabled={loading}
@@ -29,9 +29,9 @@ export default function SearchForm({
         ))}
       </select>
       <input
-        className="p-2 rounded border flex-1"
+        className="p-4 mt-5 rounded border flex-1 inpt"
         type="text"
-        placeholder="Search Pokémon"
+        placeholder="Search Pokemon"
         value={search}
         onChange={e => setSearch(e.target.value)}
       />

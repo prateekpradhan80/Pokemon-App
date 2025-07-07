@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import usePokemonDetails from '../../../hooks/usePokemonDetails';
 
-
 export default async function PokemonDetailPage({ params }: { params: { name: string } }) {
   const { name } = params;
   const details = await usePokemonDetails(name);
@@ -20,7 +19,7 @@ export default async function PokemonDetailPage({ params }: { params: { name: st
   return (
     <main className="min-h-screen bg-gray-50 flex flex-col items-center py-8">
       <div className="w-full max-w-2xl">
-        <Link href="/" className="text-teal-500 font-bold text-lg mb-6 inline-block hover:underline">
+        <Link href="/" className="text-teal-500 font-bold text-lg mb-6 ml-8 inline-block hover:underline">
           &lt; Back
         </Link>
         <div className="rounded-2xl overflow-hidden shadow-lg mx-auto" style={{ maxWidth: 500 }}>
@@ -42,4 +41,4 @@ export default async function PokemonDetailPage({ params }: { params: { name: st
       </div>
     </main>
   );
-} 
+}

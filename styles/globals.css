@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities; 
+
+.inpt{
+    margin-top: 4px;
+    padding: 6px;
+    border-radius: 4px;
+}
+.slct{
+    padding:6px;
+    border-radius: 4px;
+}

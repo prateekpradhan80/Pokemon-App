@@ -14,7 +14,7 @@ export default function HomePage() {
 
   return (
     <main className="max-w-3xl mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4 text-center">Pokemon Search</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center">Pokémon Search</h1>
       <SearchForm
         types={types}
         loading={typesLoading}

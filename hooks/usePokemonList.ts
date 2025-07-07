@@ -3,8 +3,15 @@ import { useEffect, useState } from "react";
 export default function usePokemonList(type: string, search: string) {
   const [pokemons, setPokemons] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
   // console.log("poke", pokemons);
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+    
     setLoading(true);
     let url = "https://pokeapi.co/api/v2/pokemon?limit=151";
     fetch(url)
@@ -41,7 +48,7 @@ export default function usePokemonList(type: string, search: string) {
         setPokemons(detailedList);
         setLoading(false);
       });
-  }, [type, search]);
+  }, [type, search, mounted]);
 
-  return { pokemons, loading };
+  return { pokemons, loading: loading || !mounted };
 }
