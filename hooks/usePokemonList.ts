@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export default function usePokemonList(type: string, search: string) {
   const [pokemons, setPokemons] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  console.log("poke", pokemons);
+  // console.log("poke", pokemons);
   useEffect(() => {
     setLoading(true);
     let url = "https://pokeapi.co/api/v2/pokemon?limit=151";
